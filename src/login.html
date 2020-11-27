@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+
+<body>
+  <div id="form-main">
+  <div id="form-div">
+    <form class="form" id="formProject">
+      <p class="username">
+        <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="User Name" id="username" />
+      </p>
+      <p class="password">
+        <input name="password" type="password" class="validate[required,custom[password]] feedback-input" id="password" placeholder="Enter Password" />
+      </p>
+      <div class="submit">
+        <input type="button" value="Login" id="button" onclick = "login()"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
+
+<script>
+function login() {
+    var Username = document.getElementById("username").value;
+        Username = Username.toLowerCase();
+    var password = document.getElementById("password").value;
+
+        if (Username == "admin" && password == "admin")
+        {
+                        localStorage.token = "authenticated";
+                        window.location.href = "index.html";
+        }
+        else
+        {
+                alert("username or password is incorrect");
+                window.location.href = "login.html";
+        }
+}
+
+</script>
+
+</body>
+
+</html>
