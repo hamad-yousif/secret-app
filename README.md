@@ -19,6 +19,6 @@
     |_____ login.html
 |__ terraform
      |____ 03-secret-app.tf
-7)	A new login HTML code login.html was added to perform basic authentication.
-8)	The deployment will be triggered whenever a new code is pushed to the master repository branch.
+7) A new login HTML code login.html was added to perform basic authentication.
+8) The deployment will be triggered whenever a new code is pushed to the master repository branch.
 
